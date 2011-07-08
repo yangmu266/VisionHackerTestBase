@@ -1,0 +1,372 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* MyAVControllerAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1219, 195}}";
+			sepNavSelRange = "{340, 0}";
+			sepNavVisRange = "{56, 284}";
+		};
+	};
+	1D3623250D0F684500981E51 /* MyAVControllerAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 884}}";
+			sepNavSelRange = "{1152, 0}";
+			sepNavVisRange = "{1, 1154}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* MyAVController */ = {
+		activeExec = 0;
+		executables = (
+			430C1F0A12197A2C00102B33 /* MyAVController */,
+		);
+	};
+	28D7ACF60DDB3853001CB0EB /* WelcomeViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1012, 438}}";
+			sepNavSelRange = "{118, 0}";
+			sepNavVisRange = "{0, 126}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* WelcomeViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1012, 444}}";
+			sepNavSelRange = "{217, 0}";
+			sepNavVisRange = "{0, 268}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeExecutable = 430C1F0A12197A2C00102B33 /* MyAVController */;
+		activeSDKPreference = iphoneos4.0;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* MyAVController */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* MyAVController */,
+		);
+		breakpoints = (
+			435D99A411D23E10009ADC4F /* cameraView.m:23 */,
+			43D32D4B11D370AC00AFA790 /* dmtxregion.c:84 */,
+		);
+		codeSenseManager = 435D975111D1F122009ADC4F /* Code sense */;
+		executables = (
+			430C1F0A12197A2C00102B33 /* MyAVController */,
+		);
+		perUserDictionary = {
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA23EDF0692099D00951B8B" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					329,
+					20,
+					229,
+					229,
+					157,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_IgnoreCountID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					834,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					794,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 303649274;
+			PBXWorkspaceStateSaveDate = 303649274;
+		};
+		perUserProjectItems = {
+			4303AD0A1218629A003EFCD9 /* PBXTextBookmark */ = 4303AD0A1218629A003EFCD9 /* PBXTextBookmark */;
+			430C1F3312197ADE00102B33 /* PBXTextBookmark */ = 430C1F3312197ADE00102B33 /* PBXTextBookmark */;
+			430C1F3412197ADE00102B33 /* PBXTextBookmark */ = 430C1F3412197ADE00102B33 /* PBXTextBookmark */;
+			430C1F3512197ADE00102B33 /* PBXTextBookmark */ = 430C1F3512197ADE00102B33 /* PBXTextBookmark */;
+			430C1F4512197D5400102B33 /* PBXTextBookmark */ = 430C1F4512197D5400102B33 /* PBXTextBookmark */;
+			430C1F4612197D5400102B33 /* PlistBookmark */ = 430C1F4612197D5400102B33 /* PlistBookmark */;
+			430C1F4912197DAE00102B33 /* PlistBookmark */ = 430C1F4912197DAE00102B33 /* PlistBookmark */;
+			431BFF2A11FCE04E00161747 /* PBXTextBookmark */ = 431BFF2A11FCE04E00161747 /* PBXTextBookmark */;
+			431C753611DBE1C50090E2D9 /* PBXTextBookmark */ = 431C753611DBE1C50090E2D9 /* PBXTextBookmark */;
+			431C753D11DBE1C50090E2D9 /* PBXTextBookmark */ = 431C753D11DBE1C50090E2D9 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 435D975011D1F122009ADC4F /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1012, 289}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 229}";
+		};
+	};
+	32CA4F630368D1EE00C91783 /* MyAVController_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1012, 438}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 89}";
+		};
+	};
+	4303AD0A1218629A003EFCD9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* WelcomeViewController.m */;
+		name = "WelcomeViewController.m: 7";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 268;
+		vrLoc = 0;
+	};
+	430C1F0A12197A2C00102B33 /* MyAVController */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = MyAVController;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	430C1F3312197ADE00102B33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* MyAVController_Prefix.pch */;
+		name = "MyAVController_Prefix.pch: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 89;
+		vrLoc = 0;
+	};
+	430C1F3412197ADE00102B33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* MyAVControllerAppDelegate.m */;
+		name = "MyAVControllerAppDelegate.m: 34";
+		rLen = 0;
+		rLoc = 1152;
+		rType = 0;
+		vrLen = 1154;
+		vrLoc = 1;
+	};
+	430C1F3512197ADE00102B33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* WelcomeViewController.h */;
+		name = "WelcomeViewController.h: 6";
+		rLen = 0;
+		rLoc = 118;
+		rType = 0;
+		vrLen = 126;
+		vrLoc = 0;
+	};
+	430C1F4512197D5400102B33 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 438CE43011D2766D00CF55BC /* MyAVController.m */;
+		name = "MyAVController.m: 125";
+		rLen = 0;
+		rLoc = 5757;
+		rType = 0;
+		vrLen = 790;
+		vrLoc = 0;
+	};
+	430C1F4612197D5400102B33 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* MyAVController-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleDevelopmentRegion,
+		);
+		name = "/Users/Benjamin/Desktop/MyAVControllerDemo/MyAVController-Info.plist";
+		rLen = 7;
+		rLoc = 0;
+	};
+	430C1F4912197DAE00102B33 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* MyAVController-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleName,
+		);
+		name = "/Users/Benjamin/Desktop/MyAVControllerDemo/MyAVController-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	431BFF2A11FCE04E00161747 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 438CE42F11D2766D00CF55BC /* MyAVController.h */;
+		name = "MyAVController.h: 13";
+		rLen = 0;
+		rLoc = 329;
+		rType = 0;
+		vrLen = 1163;
+		vrLoc = 0;
+	};
+	431C753611DBE1C50090E2D9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* MyAVControllerAppDelegate.h */;
+		name = "MyAVControllerAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 340;
+		vrLoc = 0;
+	};
+	431C753D11DBE1C50090E2D9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 229;
+		vrLoc = 0;
+	};
+	435D975011D1F122009ADC4F /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	435D975111D1F122009ADC4F /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	435D977111D1F919009ADC4F /* dmtxregion.c */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.c;
+		name = dmtxregion.c;
+		path = /Users/Benjamin/Travail/GFI/MyAVControllerDemo/dmtxregion.c;
+		sourceTree = "<absolute>";
+	};
+	435D98E011D22C1F009ADC4F /* cameraView.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = cameraView.m;
+		path = /Users/Benjamin/Travail/GFI/Flashcode/Classes/cameraView.m;
+		sourceTree = "<absolute>";
+	};
+	435D99A411D23E10009ADC4F /* cameraView.m:23 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 435D98E011D22C1F009ADC4F /* cameraView.m */;
+		functionName = "-drawRect:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 23;
+		modificationTime = 303587471.077963;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	438CE42F11D2766D00CF55BC /* MyAVController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1012, 559}}";
+			sepNavSelRange = "{329, 0}";
+			sepNavVisRange = "{0, 1163}";
+		};
+	};
+	438CE43011D2766D00CF55BC /* MyAVController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1219, 2028}}";
+			sepNavSelRange = "{5757, 0}";
+			sepNavVisRange = "{464, 229}";
+		};
+	};
+	43D32D4B11D370AC00AFA790 /* dmtxregion.c:84 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 435D977111D1F919009ADC4F /* dmtxregion.c */;
+		functionName = "dmtxRegionFindNext()";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 84;
+		modificationTime = 303587471.079715;
+		originalNumberOfMultipleMatches = 1;
+		state = 0;
+	};
+	8D1107310486CEB800E47090 /* MyAVController-Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{66, 4}, {1214, 774}}";
+		};
+	};
+}

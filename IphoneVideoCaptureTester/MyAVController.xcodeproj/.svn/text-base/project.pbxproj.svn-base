@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* MyAVControllerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* MyAVControllerAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2899E5220DE3E06400AC0155 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* WelcomeViewController.xib */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28D7ACF80DDB3853001CB0EB /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* WelcomeViewController.m */; };
+		435D984B11D2089A009ADC4F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 435D984A11D2089A009ADC4F /* AVFoundation.framework */; };
+		438CE3BC11D2717800CF55BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438CE3BB11D2717800CF55BC /* CoreGraphics.framework */; };
+		438CE3DF11D2718600CF55BC /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438CE3DE11D2718600CF55BC /* CoreVideo.framework */; };
+		438CE3E511D2719F00CF55BC /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438CE3E411D2719F00CF55BC /* CoreMedia.framework */; };
+		43D32BCE11D341F400AFA790 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D32BCD11D341F400AFA790 /* QuartzCore.framework */; };
+		43D32E3011D3A1DB00AFA790 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D32E2F11D3A1DB00AFA790 /* AudioToolbox.framework */; };
+		A591945913631DDA00074DD4 /* Stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A591943913631DDA00074DD4 /* Stdafx.cpp */; };
+		A591945A13631DDA00074DD4 /* classifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A591943C13631DDA00074DD4 /* classifier.cpp */; };
+		A591945B13631DDA00074DD4 /* detector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A591943F13631DDA00074DD4 /* detector.cpp */; };
+		A591945C13631DDA00074DD4 /* FaceDetectionBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A591944013631DDA00074DD4 /* FaceDetectionBase.cpp */; };
+		A591945D13631DDA00074DD4 /* FaceDetectionSoftCascade.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A591944213631DDA00074DD4 /* FaceDetectionSoftCascade.cpp */; };
+		A591945E13631DDA00074DD4 /* FaceDetectorLbpPostFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A591944413631DDA00074DD4 /* FaceDetectorLbpPostFilter.cpp */; };
+		A591945F13631DDA00074DD4 /* feature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A591944613631DDA00074DD4 /* feature.cpp */; };
+		A591946013631DDA00074DD4 /* histogram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A591944913631DDA00074DD4 /* histogram.cpp */; };
+		A591946113631DDA00074DD4 /* ILabsPostFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A591944B13631DDA00074DD4 /* ILabsPostFilter.cpp */; };
+		A591946213631DDA00074DD4 /* image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A591944D13631DDA00074DD4 /* image.cpp */; };
+		A591946313631DDA00074DD4 /* lbp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A591944F13631DDA00074DD4 /* lbp.cpp */; };
+		A591946513631DDA00074DD4 /* wrect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A591945613631DDA00074DD4 /* wrect.cpp */; };
+		C71237581363254E00DD2B40 /* detector_pruned_rot.dat in Resources */ = {isa = PBXBuildFile; fileRef = C71237561363254E00DD2B40 /* detector_pruned_rot.dat */; };
+		C71237591363254E00DD2B40 /* ilabs_postfilter_14jun10a.bin in Resources */ = {isa = PBXBuildFile; fileRef = C71237571363254E00DD2B40 /* ilabs_postfilter_14jun10a.bin */; };
+		C7BF5BCA1362F16E00CB54C4 /* FaceDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7BF5BC91362F16E00CB54C4 /* FaceDetector.cpp */; };
+		C7BF5BCE1362F35800CB54C4 /* FaceDetectorTestController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C7BF5BCC1362F35800CB54C4 /* FaceDetectorTestController.mm */; };
+		C7BF5BCF1362F35800CB54C4 /* FaceDetectorTestController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7BF5BCD1362F35800CB54C4 /* FaceDetectorTestController.xib */; };
+		C7BF5BD71362F47E00CB54C4 /* some.txt in Resources */ = {isa = PBXBuildFile; fileRef = C7BF5BD51362F47E00CB54C4 /* some.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		C7BF5C0A1362FED200CB54C4 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = "com.apple.build-tasks.copy-tiff-file";
+			filePatterns = "some.*";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"",
+			);
+			script = "# builtin-copyTiff\n";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* MyAVControllerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAVControllerAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* MyAVControllerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAVControllerAppDelegate.m; sourceTree = "<group>"; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* MyAVController_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAVController_Prefix.pch; sourceTree = "<group>"; };
+		430C1F0912197A2C00102B33 /* MyAVController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAVController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		435D984A11D2089A009ADC4F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		438CE3BB11D2717800CF55BC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		438CE3DE11D2718600CF55BC /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		438CE3E411D2719F00CF55BC /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		43D32BCD11D341F400AFA790 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		43D32E2F11D3A1DB00AFA790 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8D1107310486CEB800E47090 /* MyAVController-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MyAVController-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		A591943813631DDA00074DD4 /* Stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stdafx.h; sourceTree = "<group>"; };
+		A591943913631DDA00074DD4 /* Stdafx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Stdafx.cpp; sourceTree = "<group>"; };
+		A591943A13631DDA00074DD4 /* ATLFake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLFake.h; sourceTree = "<group>"; };
+		A591943B13631DDA00074DD4 /* ByteStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ByteStream.h; sourceTree = "<group>"; };
+		A591943C13631DDA00074DD4 /* classifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = classifier.cpp; sourceTree = "<group>"; };
+		A591943D13631DDA00074DD4 /* classifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = classifier.h; sourceTree = "<group>"; };
+		A591943E13631DDA00074DD4 /* ClassifierData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifierData.h; sourceTree = "<group>"; };
+		A591943F13631DDA00074DD4 /* detector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = detector.cpp; sourceTree = "<group>"; };
+		A591944013631DDA00074DD4 /* FaceDetectionBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FaceDetectionBase.cpp; sourceTree = "<group>"; };
+		A591944113631DDA00074DD4 /* FaceDetectionBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetectionBase.h; sourceTree = "<group>"; };
+		A591944213631DDA00074DD4 /* FaceDetectionSoftCascade.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FaceDetectionSoftCascade.cpp; sourceTree = "<group>"; };
+		A591944313631DDA00074DD4 /* FaceDetectionSoftCascade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetectionSoftCascade.h; sourceTree = "<group>"; };
+		A591944413631DDA00074DD4 /* FaceDetectorLbpPostFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FaceDetectorLbpPostFilter.cpp; sourceTree = "<group>"; };
+		A591944513631DDA00074DD4 /* FaceDetectorLbpPostFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetectorLbpPostFilter.h; sourceTree = "<group>"; };
+		A591944613631DDA00074DD4 /* feature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = feature.cpp; sourceTree = "<group>"; };
+		A591944713631DDA00074DD4 /* feature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feature.h; sourceTree = "<group>"; };
+		A591944813631DDA00074DD4 /* globalpara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globalpara.h; sourceTree = "<group>"; };
+		A591944913631DDA00074DD4 /* histogram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = histogram.cpp; sourceTree = "<group>"; };
+		A591944A13631DDA00074DD4 /* histogram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = histogram.h; sourceTree = "<group>"; };
+		A591944B13631DDA00074DD4 /* ILabsPostFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ILabsPostFilter.cpp; sourceTree = "<group>"; };
+		A591944C13631DDA00074DD4 /* ILabsPostFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILabsPostFilter.h; sourceTree = "<group>"; };
+		A591944D13631DDA00074DD4 /* image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = image.cpp; sourceTree = "<group>"; };
+		A591944E13631DDA00074DD4 /* image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image.h; sourceTree = "<group>"; };
+		A591944F13631DDA00074DD4 /* lbp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lbp.cpp; sourceTree = "<group>"; };
+		A591945013631DDA00074DD4 /* lbp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lbp.h; sourceTree = "<group>"; };
+		A591945113631DDA00074DD4 /* Multidetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Multidetector.h; sourceTree = "<group>"; };
+		A591945413631DDA00074DD4 /* windows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = windows.h; sourceTree = "<group>"; };
+		A591945513631DDA00074DD4 /* winTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = winTypes.h; sourceTree = "<group>"; };
+		A591945613631DDA00074DD4 /* wrect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wrect.cpp; sourceTree = "<group>"; };
+		A591945713631DDA00074DD4 /* wrect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wrect.h; sourceTree = "<group>"; };
+		C71237561363254E00DD2B40 /* detector_pruned_rot.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = detector_pruned_rot.dat; sourceTree = "<group>"; };
+		C71237571363254E00DD2B40 /* ilabs_postfilter_14jun10a.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = ilabs_postfilter_14jun10a.bin; sourceTree = "<group>"; };
+		C7BF5BC71362F09300CB54C4 /* FaceDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FaceDetector.h; path = Classes/FaceDetector.h; sourceTree = "<group>"; };
+		C7BF5BC91362F16E00CB54C4 /* FaceDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FaceDetector.cpp; path = Classes/FaceDetector.cpp; sourceTree = "<group>"; };
+		C7BF5BCB1362F35800CB54C4 /* FaceDetectorTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FaceDetectorTestController.h; path = Classes/FaceDetectorTestController.h; sourceTree = "<group>"; };
+		C7BF5BCC1362F35800CB54C4 /* FaceDetectorTestController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = FaceDetectorTestController.mm; path = Classes/FaceDetectorTestController.mm; sourceTree = "<group>"; };
+		C7BF5BCD1362F35800CB54C4 /* FaceDetectorTestController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FaceDetectorTestController.xib; path = Classes/FaceDetectorTestController.xib; sourceTree = "<group>"; };
+		C7BF5BD51362F47E00CB54C4 /* some.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = some.txt; path = Classes/some.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				435D984B11D2089A009ADC4F /* AVFoundation.framework in Frameworks */,
+				438CE3BC11D2717800CF55BC /* CoreGraphics.framework in Frameworks */,
+				438CE3DF11D2718600CF55BC /* CoreVideo.framework in Frameworks */,
+				438CE3E511D2719F00CF55BC /* CoreMedia.framework in Frameworks */,
+				43D32BCE11D341F400AFA790 /* QuartzCore.framework in Frameworks */,
+				43D32E3011D3A1DB00AFA790 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* MyAVControllerAppDelegate.h */,
+				1D3623250D0F684500981E51 /* MyAVControllerAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* WelcomeViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* WelcomeViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				430C1F0912197A2C00102B33 /* MyAVController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				A591943713631DDA00074DD4 /* Source */,
+				C7BF5BD81362F49000CB54C4 /* FaceDetector */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+			usesTabs = 1;
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* MyAVController_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2899E5210DE3E06400AC0155 /* WelcomeViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* MyAVController-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438CE3BB11D2717800CF55BC /* CoreGraphics.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				435D984A11D2089A009ADC4F /* AVFoundation.framework */,
+				438CE3DE11D2718600CF55BC /* CoreVideo.framework */,
+				438CE3E411D2719F00CF55BC /* CoreMedia.framework */,
+				43D32BCD11D341F400AFA790 /* QuartzCore.framework */,
+				43D32E2F11D3A1DB00AFA790 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A591943713631DDA00074DD4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C71237561363254E00DD2B40 /* detector_pruned_rot.dat */,
+				C71237571363254E00DD2B40 /* ilabs_postfilter_14jun10a.bin */,
+				A591943813631DDA00074DD4 /* Stdafx.h */,
+				A591943913631DDA00074DD4 /* Stdafx.cpp */,
+				A591943A13631DDA00074DD4 /* ATLFake.h */,
+				A591943B13631DDA00074DD4 /* ByteStream.h */,
+				A591943C13631DDA00074DD4 /* classifier.cpp */,
+				A591943D13631DDA00074DD4 /* classifier.h */,
+				A591943E13631DDA00074DD4 /* ClassifierData.h */,
+				A591943F13631DDA00074DD4 /* detector.cpp */,
+				A591944013631DDA00074DD4 /* FaceDetectionBase.cpp */,
+				A591944113631DDA00074DD4 /* FaceDetectionBase.h */,
+				A591944213631DDA00074DD4 /* FaceDetectionSoftCascade.cpp */,
+				A591944313631DDA00074DD4 /* FaceDetectionSoftCascade.h */,
+				A591944413631DDA00074DD4 /* FaceDetectorLbpPostFilter.cpp */,
+				A591944513631DDA00074DD4 /* FaceDetectorLbpPostFilter.h */,
+				A591944613631DDA00074DD4 /* feature.cpp */,
+				A591944713631DDA00074DD4 /* feature.h */,
+				A591944813631DDA00074DD4 /* globalpara.h */,
+				A591944913631DDA00074DD4 /* histogram.cpp */,
+				A591944A13631DDA00074DD4 /* histogram.h */,
+				A591944B13631DDA00074DD4 /* ILabsPostFilter.cpp */,
+				A591944C13631DDA00074DD4 /* ILabsPostFilter.h */,
+				A591944D13631DDA00074DD4 /* image.cpp */,
+				A591944E13631DDA00074DD4 /* image.h */,
+				A591944F13631DDA00074DD4 /* lbp.cpp */,
+				A591945013631DDA00074DD4 /* lbp.h */,
+				A591945113631DDA00074DD4 /* Multidetector.h */,
+				A591945413631DDA00074DD4 /* windows.h */,
+				A591945513631DDA00074DD4 /* winTypes.h */,
+				A591945613631DDA00074DD4 /* wrect.cpp */,
+				A591945713631DDA00074DD4 /* wrect.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		C7BF5BD81362F49000CB54C4 /* FaceDetector */ = {
+			isa = PBXGroup;
+			children = (
+				C7BF5BC71362F09300CB54C4 /* FaceDetector.h */,
+				C7BF5BC91362F16E00CB54C4 /* FaceDetector.cpp */,
+				C7BF5BD51362F47E00CB54C4 /* some.txt */,
+				C7BF5BCB1362F35800CB54C4 /* FaceDetectorTestController.h */,
+				C7BF5BCC1362F35800CB54C4 /* FaceDetectorTestController.mm */,
+				C7BF5BCD1362F35800CB54C4 /* FaceDetectorTestController.xib */,
+			);
+			name = FaceDetector;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* MyAVController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "MyAVController" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+				C7BF5C0A1362FED200CB54C4 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = MyAVController;
+			productName = Flashcode;
+			productReference = 430C1F0912197A2C00102B33 /* MyAVController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MyAVController" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* MyAVController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* WelcomeViewController.xib in Resources */,
+				C7BF5BCF1362F35800CB54C4 /* FaceDetectorTestController.xib in Resources */,
+				C7BF5BD71362F47E00CB54C4 /* some.txt in Resources */,
+				C71237581363254E00DD2B40 /* detector_pruned_rot.dat in Resources */,
+				C71237591363254E00DD2B40 /* ilabs_postfilter_14jun10a.bin in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* MyAVControllerAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* WelcomeViewController.m in Sources */,
+				C7BF5BCA1362F16E00CB54C4 /* FaceDetector.cpp in Sources */,
+				C7BF5BCE1362F35800CB54C4 /* FaceDetectorTestController.mm in Sources */,
+				A591945913631DDA00074DD4 /* Stdafx.cpp in Sources */,
+				A591945A13631DDA00074DD4 /* classifier.cpp in Sources */,
+				A591945B13631DDA00074DD4 /* detector.cpp in Sources */,
+				A591945C13631DDA00074DD4 /* FaceDetectionBase.cpp in Sources */,
+				A591945D13631DDA00074DD4 /* FaceDetectionSoftCascade.cpp in Sources */,
+				A591945E13631DDA00074DD4 /* FaceDetectorLbpPostFilter.cpp in Sources */,
+				A591945F13631DDA00074DD4 /* feature.cpp in Sources */,
+				A591946013631DDA00074DD4 /* histogram.cpp in Sources */,
+				A591946113631DDA00074DD4 /* ILabsPostFilter.cpp in Sources */,
+				A591946213631DDA00074DD4 /* image.cpp in Sources */,
+				A591946313631DDA00074DD4 /* lbp.cpp in Sources */,
+				A591946513631DDA00074DD4 /* wrect.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MyAVController_Prefix.pch;
+				INFOPLIST_FILE = "MyAVController-Info.plist";
+				PRODUCT_NAME = MyAVController;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MyAVController_Prefix.pch;
+				INFOPLIST_FILE = "MyAVController-Info.plist";
+				PRODUCT_NAME = MyAVController;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.3;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "MyAVController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MyAVController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
