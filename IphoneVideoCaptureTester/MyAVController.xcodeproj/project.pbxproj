@@ -26,6 +26,7 @@
 		C7BF5BD71362F47E00CB54C4 /* some.txt in Resources */ = {isa = PBXBuildFile; fileRef = C7BF5BD51362F47E00CB54C4 /* some.txt */; };
 		C7ED47081364500800951048 /* OpenCVFaceDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = C7ED47071364500800951048 /* OpenCVFaceDetector.mm */; };
 		C7EDE60D136D4394008B90A4 /* ActionDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = C7EDE60C136D4394008B90A4 /* ActionDetector.mm */; };
+		C7F29ACC13E3E4EE0045C012 /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = C7F29ACB13E3E4EE0045C012 /* haarcascade_frontalface_default.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -71,6 +72,7 @@
 		C7ED47071364500800951048 /* OpenCVFaceDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVFaceDetector.mm; sourceTree = "<group>"; };
 		C7EDE60B136D4394008B90A4 /* ActionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionDetector.h; sourceTree = "<group>"; };
 		C7EDE60C136D4394008B90A4 /* ActionDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ActionDetector.mm; sourceTree = "<group>"; };
+		C7F29ACB13E3E4EE0045C012 /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 		C7BF5BD81362F49000CB54C4 /* FaceDetector */ = {
 			isa = PBXGroup;
 			children = (
+				C7F29ACB13E3E4EE0045C012 /* haarcascade_frontalface_default.xml */,
 				C7ED47061364500800951048 /* OpenCVFaceDetector.h */,
 				C7ED47071364500800951048 /* OpenCVFaceDetector.mm */,
 				C7BF5BC71362F09300CB54C4 /* FaceDetector.h */,
@@ -227,6 +230,7 @@
 				2899E5220DE3E06400AC0155 /* WelcomeViewController.xib in Resources */,
 				C7BF5BCF1362F35800CB54C4 /* FaceDetectorTestController.xib in Resources */,
 				C7BF5BD71362F47E00CB54C4 /* some.txt in Resources */,
+				C7F29ACC13E3E4EE0045C012 /* haarcascade_frontalface_default.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

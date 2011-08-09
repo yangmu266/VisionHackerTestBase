@@ -122,6 +122,7 @@ bool busy = false;
         
         // Start the session
         [mCaptureSession startRunning];
+        NSLog(@"start");
     }
 }
 

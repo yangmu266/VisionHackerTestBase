@@ -11,8 +11,12 @@
 		C70640D913F121E800F4163B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C70640D713F121E800F4163B /* InfoPlist.strings */; };
 		C70640DC13F121E800F4163B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C70640DB13F121E800F4163B /* main.m */; };
 		C70640DF13F121E800F4163B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C70640DD13F121E800F4163B /* Credits.rtf */; };
-		C70640E213F121E800F4163B /* TechTesterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C70640E113F121E800F4163B /* TechTesterAppDelegate.m */; };
-		C70640E513F121E800F4163B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70640E313F121E800F4163B /* MainMenu.xib */; };
+		C70640EF13F1223900F4163B /* FaceDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = C70640EC13F1223900F4163B /* FaceDetector.mm */; };
+		C70640F013F1223900F4163B /* MyDocument.mm in Sources */ = {isa = PBXBuildFile; fileRef = C70640EE13F1223900F4163B /* MyDocument.mm */; };
+		C70640F513F1226100F4163B /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = C70640F313F1226100F4163B /* MainMenu.nib */; };
+		C70640F613F1226100F4163B /* MyDocument.nib in Resources */ = {isa = PBXBuildFile; fileRef = C70640F413F1226100F4163B /* MyDocument.nib */; };
+		C70640F813F1227700F4163B /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70640F713F1227700F4163B /* QTKit.framework */; };
+		C70640FA13F1227E00F4163B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70640F913F1227D00F4163B /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +25,19 @@
 		C70640D113F121E800F4163B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		C70640D213F121E800F4163B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C70640D313F121E800F4163B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		C70640D613F121E800F4163B /* TechTester-Info.plist */ = {isa = PBXFileReference; path = "TechTester-Info.plist"; sourceTree = "<group>"; };
+		C70640D613F121E800F4163B /* TechTester-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TechTester-Info.plist"; sourceTree = "<group>"; };
 		C70640D813F121E800F4163B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C70640DA13F121E800F4163B /* TechTester-Prefix.pch */ = {isa = PBXFileReference; path = "TechTester-Prefix.pch"; sourceTree = "<group>"; };
+		C70640DA13F121E800F4163B /* TechTester-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TechTester-Prefix.pch"; sourceTree = "<group>"; };
 		C70640DB13F121E800F4163B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C70640DE13F121E800F4163B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		C70640E013F121E800F4163B /* TechTesterAppDelegate.h */ = {isa = PBXFileReference; path = TechTesterAppDelegate.h; sourceTree = "<group>"; };
-		C70640E113F121E800F4163B /* TechTesterAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TechTesterAppDelegate.m; sourceTree = "<group>"; };
-		C70640E413F121E800F4163B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C70640EB13F1223900F4163B /* FaceDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetector.h; sourceTree = "<group>"; };
+		C70640EC13F1223900F4163B /* FaceDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceDetector.mm; sourceTree = "<group>"; };
+		C70640ED13F1223900F4163B /* MyDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocument.h; sourceTree = "<group>"; };
+		C70640EE13F1223900F4163B /* MyDocument.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyDocument.mm; sourceTree = "<group>"; };
+		C70640F313F1226100F4163B /* MainMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = MainMenu.nib; sourceTree = "<group>"; };
+		C70640F413F1226100F4163B /* MyDocument.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = MyDocument.nib; sourceTree = "<group>"; };
+		C70640F713F1227700F4163B /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
+		C70640F913F1227D00F4163B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +46,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C70640CF13F121E800F4163B /* Cocoa.framework in Frameworks */,
+				C70640F813F1227700F4163B /* QTKit.framework in Frameworks */,
+				C70640FA13F1227E00F4163B /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +74,8 @@
 		C70640CD13F121E800F4163B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C70640F913F1227D00F4163B /* QuartzCore.framework */,
+				C70640F713F1227700F4163B /* QTKit.framework */,
 				C70640CE13F121E800F4163B /* Cocoa.framework */,
 				C70640D013F121E800F4163B /* Other Frameworks */,
 			);
@@ -82,9 +95,8 @@
 		C70640D413F121E800F4163B /* TechTester */ = {
 			isa = PBXGroup;
 			children = (
-				C70640E013F121E800F4163B /* TechTesterAppDelegate.h */,
-				C70640E113F121E800F4163B /* TechTesterAppDelegate.m */,
-				C70640E313F121E800F4163B /* MainMenu.xib */,
+				C70640F213F1225100F4163B /* Resources */,
+				C70640F113F1223E00F4163B /* Classes */,
 				C70640D513F121E800F4163B /* Supporting Files */,
 			);
 			path = TechTester;
@@ -100,6 +112,27 @@
 				C70640DD13F121E800F4163B /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C70640F113F1223E00F4163B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C70640EB13F1223900F4163B /* FaceDetector.h */,
+				C70640EC13F1223900F4163B /* FaceDetector.mm */,
+				C70640ED13F1223900F4163B /* MyDocument.h */,
+				C70640EE13F1223900F4163B /* MyDocument.mm */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		C70640F213F1225100F4163B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C70640F313F1226100F4163B /* MainMenu.nib */,
+				C70640F413F1226100F4163B /* MyDocument.nib */,
+			);
+			name = Resources;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,7 +187,8 @@
 			files = (
 				C70640D913F121E800F4163B /* InfoPlist.strings in Resources */,
 				C70640DF13F121E800F4163B /* Credits.rtf in Resources */,
-				C70640E513F121E800F4163B /* MainMenu.xib in Resources */,
+				C70640F513F1226100F4163B /* MainMenu.nib in Resources */,
+				C70640F613F1226100F4163B /* MyDocument.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,7 +200,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C70640DC13F121E800F4163B /* main.m in Sources */,
-				C70640E213F121E800F4163B /* TechTesterAppDelegate.m in Sources */,
+				C70640EF13F1223900F4163B /* FaceDetector.mm in Sources */,
+				C70640F013F1223900F4163B /* MyDocument.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,14 +222,6 @@
 				C70640DE13F121E800F4163B /* en */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		C70640E313F121E800F4163B /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C70640E413F121E800F4163B /* en */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -236,12 +263,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TechTester/TechTester-Prefix.pch";
 				INFOPLIST_FILE = "TechTester/TechTester-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -281,6 +310,7 @@
 				C70640EA13F121E800F4163B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
