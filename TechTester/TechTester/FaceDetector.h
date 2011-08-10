@@ -41,6 +41,8 @@ struct FDElement {
     int x2, y2;
 };
 
+//#import "FaceDetectionSoftCascade.dylib"
+
 class FaceDetector {
 public:
     // 初始化函数，在最初调用
@@ -54,6 +56,7 @@ public:
     // 传入灰度图*data，宽度为width，高度height。每个像素占1 byte空间。
     // 根据传入图像，返回一个标识数组，在输出图像上标识对应位置。
     // 标识类型目前支持：点，线，矩形，详见struct FDElement
+    // data存储行优先，坐标(x,y)存储位于(y*width+x)，x对应width，y对应height
     std::vector<struct FDElement> detect(unsigned char* data, int width, int height);
 };
 

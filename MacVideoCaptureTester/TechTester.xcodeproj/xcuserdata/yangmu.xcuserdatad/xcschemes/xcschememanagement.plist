@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>TechTester.xcscheme</key>
+		<key>StillMotion.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>C70640C913F121E800F4163B</key>
+		<key>8D15AC270486D014006FF6A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

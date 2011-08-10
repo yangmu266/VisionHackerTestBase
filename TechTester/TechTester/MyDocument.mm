@@ -49,6 +49,7 @@
 
 #import "MyDocument.h"
 #import "FaceDetector.h"
+//#import "FaceDetector.dylib"
 
 @implementation MyDocument
 
@@ -215,8 +216,8 @@ NSImage* GrayImageFromNSImage(NSImage*image)
     //colorspace = CGColorSpaceCreateDeviceGray();
     
     unsigned char *bitmapData;
-    int bitmapByteCount;
-    int bitmapBytesPerRow;
+    unsigned long bitmapByteCount;
+    unsigned long bitmapBytesPerRow;
     CGImageRef inImage = CGImageRefCopyFromNSImage(image);  //need release
     
     size_t pixelsWide = CGImageGetWidth(inImage);
@@ -245,11 +246,11 @@ NSImage* GrayImageFromNSImage(NSImage*image)
         for(i = 0; i < bitmapBytesPerRow; i += 4)
             for(j = 0; j < pixelsHigh; j++)
             {
-                //                int grey = (int)(bitmapData[j * bitmapBytesPerRow + i]*0.299
-                //                                 + bitmapData[j * bitmapBytesPerRow + i+1]*0.587 + bitmapData[j *
-                //                                                                                              bitmapBytesPerRow + i+2]*0.114);
-                int grey = (int)((bitmapData[j*bitmapBytesPerRow + i] + bitmapData[j*bitmapBytesPerRow + i+1] +
-                                  bitmapData[j*bitmapBytesPerRow + i+2] + bitmapData[j*bitmapBytesPerRow + i+3])/4);
+                                int grey = (int)(bitmapData[j * bitmapBytesPerRow + i]*0.299
+                                                 + bitmapData[j * bitmapBytesPerRow + i+1]*0.587 + bitmapData[j *
+                                                                                                              bitmapBytesPerRow + i+2]*0.114);
+//                int grey = (int)((bitmapData[j*bitmapBytesPerRow + i] + bitmapData[j*bitmapBytesPerRow + i+1] +
+//                                  bitmapData[j*bitmapBytesPerRow + i+2] + bitmapData[j*bitmapBytesPerRow + i+3])/4);
                 
                 bitmapData[j * bitmapBytesPerRow + i] = bitmapData[j *
                                                                    bitmapBytesPerRow + i + 1] = bitmapData[j * bitmapBytesPerRow + i + 2] =
@@ -257,8 +258,10 @@ NSImage* GrayImageFromNSImage(NSImage*image)
             }
     }    
     //    _rect r = fd.detect(bitmapData, pixelsWide, pixelsHigh);
-    std::vector<struct FDElement> elements = fd.detect(bitmapData, pixelsWide, pixelsHigh);
+    std::vector<struct FDElement> elements = fd.detect(bitmapData, (int)pixelsWide, (int)pixelsHigh);
     //    NSLog(@"%d, %d, %d, %d", r.x1, r.y1, r.x2, r.y2);
+    CGContextSetLineWidth(context, 2.0);
+//    CGContextSetRGBStrokeColor(context, 1.0, 0.0, 0.0, 1.0);
     for (int i=0; i<elements.size(); i++) {
         switch(elements[i].type) {
             case kFDTypeLine:
