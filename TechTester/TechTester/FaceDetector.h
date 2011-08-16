@@ -41,7 +41,8 @@ struct FDElement {
     int x2, y2;
 };
 
-//#import "FaceDetectionSoftCascade.dylib"
+//#import <FaceDetectorFramework/FaceDetectionSoftCascade.h>
+#import "FaceDetectionSoftCascade.h"
 
 class FaceDetector {
 public:
@@ -58,6 +59,15 @@ public:
     // 标识类型目前支持：点，线，矩形，详见struct FDElement
     // data存储行优先，坐标(x,y)存储位于(y*width+x)，x对应width，y对应height
     std::vector<struct FDElement> detect(unsigned char* data, int width, int height);
+    
+    
+    // 以下函数自行控制，与外界无关    
+    FaceDetector();
+    ~FaceDetector();
+    
+private:
+	FaceDetectionBase *m_faceDetection;
+    bool initialized;    
 };
 
 #endif
