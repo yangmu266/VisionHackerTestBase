@@ -17,6 +17,9 @@
 		C70640F613F1226100F4163B /* MyDocument.nib in Resources */ = {isa = PBXBuildFile; fileRef = C70640F413F1226100F4163B /* MyDocument.nib */; };
 		C70640F813F1227700F4163B /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70640F713F1227700F4163B /* QTKit.framework */; };
 		C70640FA13F1227E00F4163B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70640F913F1227D00F4163B /* QuartzCore.framework */; };
+		C7A84E9013F2DD250092DD11 /* ilabs_postfilter_14jun10a.bin in Resources */ = {isa = PBXBuildFile; fileRef = C7A84E8E13F2DD250092DD11 /* ilabs_postfilter_14jun10a.bin */; };
+		C7A84E9113F2DD250092DD11 /* detector_pruned_rot.dat in Resources */ = {isa = PBXBuildFile; fileRef = C7A84E8F13F2DD250092DD11 /* detector_pruned_rot.dat */; };
+		C7D6924213FA4F8C00AD4772 /* FaceDetectorCocoaLib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D6924113FA4F8C00AD4772 /* FaceDetectorCocoaLib.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		C70640F413F1226100F4163B /* MyDocument.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = MyDocument.nib; sourceTree = "<group>"; };
 		C70640F713F1227700F4163B /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		C70640F913F1227D00F4163B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
+		C7A84E8E13F2DD250092DD11 /* ilabs_postfilter_14jun10a.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = ilabs_postfilter_14jun10a.bin; sourceTree = "<group>"; };
+		C7A84E8F13F2DD250092DD11 /* detector_pruned_rot.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = detector_pruned_rot.dat; sourceTree = "<group>"; };
+		C7D6924113FA4F8C00AD4772 /* FaceDetectorCocoaLib.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = FaceDetectorCocoaLib.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +54,7 @@
 				C70640CF13F121E800F4163B /* Cocoa.framework in Frameworks */,
 				C70640F813F1227700F4163B /* QTKit.framework in Frameworks */,
 				C70640FA13F1227E00F4163B /* QuartzCore.framework in Frameworks */,
+				C7D6924213FA4F8C00AD4772 /* FaceDetectorCocoaLib.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +112,9 @@
 		C70640D513F121E800F4163B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C7D6924113FA4F8C00AD4772 /* FaceDetectorCocoaLib.dylib */,
+				C7A84E8E13F2DD250092DD11 /* ilabs_postfilter_14jun10a.bin */,
+				C7A84E8F13F2DD250092DD11 /* detector_pruned_rot.dat */,
 				C70640D613F121E800F4163B /* TechTester-Info.plist */,
 				C70640D713F121E800F4163B /* InfoPlist.strings */,
 				C70640DA13F121E800F4163B /* TechTester-Prefix.pch */,
@@ -189,6 +199,8 @@
 				C70640DF13F121E800F4163B /* Credits.rtf in Resources */,
 				C70640F513F1226100F4163B /* MainMenu.nib in Resources */,
 				C70640F613F1226100F4163B /* MyDocument.nib in Resources */,
+				C7A84E9013F2DD250092DD11 /* ilabs_postfilter_14jun10a.bin in Resources */,
+				C7A84E9113F2DD250092DD11 /* detector_pruned_rot.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,12 +281,16 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TechTester/TechTester-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = "TechTester/TechTester-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TechTester\"",
+					/usr/local/lib,
+					"\"$(SDKROOT)/usr/local/lib/FaceDetectorCocoaLib.dylib.dSYM/Contents/Resources/DWARF\"",
 				);
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -289,11 +305,15 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TechTester/TechTester-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = "TechTester/TechTester-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TechTester\"",
+					/usr/local/lib,
+					"\"$(SDKROOT)/usr/local/lib/FaceDetectorCocoaLib.dylib.dSYM/Contents/Resources/DWARF\"",
 				);
+				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
