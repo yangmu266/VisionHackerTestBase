@@ -6,13 +6,14 @@
 //  Copyright 2011年 Tsinghua University. All rights reserved.
 //
 
+#include <opencv/cv.h>
 #include "FaceDetector.h"
 #include "vector"
 #include <string>
 
 using std::string;
 
-string cascadeName ="/usr/local/share/opencv/haarcascades/haarcascade_frontalface_alt.xml";
+//string cascadeName ="/usr/local/share/opencv/haarcascades/haarcascade_frontalface_alt.xml";
 
 
 int FaceDetector::init() {

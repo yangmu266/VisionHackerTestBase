@@ -572,6 +572,7 @@ Matx<_Tp, m, n>& operator *= (Matx<_Tp, m, n>& a, int alpha)
 {
     for( int i = 0; i < m*n; i++ )
         a.val[i] = saturate_cast<_Tp>(a.val[i] * alpha);
+    return a;
 }        
     
 template<typename _Tp, int m, int n> static inline
@@ -579,6 +580,7 @@ Matx<_Tp, m, n>& operator *= (Matx<_Tp, m, n>& a, float alpha)
 {
     for( int i = 0; i < m*n; i++ )
         a.val[i] = saturate_cast<_Tp>(a.val[i] * alpha);
+    return a;
 }    
 
 template<typename _Tp, int m, int n> static inline
@@ -586,6 +588,7 @@ Matx<_Tp, m, n>& operator *= (Matx<_Tp, m, n>& a, double alpha)
 {
     for( int i = 0; i < m*n; i++ )
         a.val[i] = saturate_cast<_Tp>(a.val[i] * alpha);
+    return a;
 }        
 
 template<typename _Tp, int m, int n> static inline
@@ -2239,7 +2242,7 @@ inline RNG::RNG() { state = 0xffffffff; }
 inline RNG::RNG(uint64 _state) { state = _state ? _state : 0xffffffff; }
 inline unsigned RNG::next()
 {
-    state = (uint64)(unsigned)state*A + (unsigned)(state >> 32);
+    state = (uint64)(unsigned)state*CV_RNG_COEFF + (unsigned)(state >> 32);
     return (unsigned)state;
 }
 
@@ -3546,6 +3549,52 @@ template<typename _Tp> static inline std::ostream& operator << (std::ostream& ou
     Formatter::get()->write(out, Mat(vec));
     return out;
 }
+    
+#if 0
+template<typename _Tp> struct AlgorithmParamType {};
+template<> struct AlgorithmParamType<int> { enum { type = CV_PARAM_TYPE_INT }; };
+template<> struct AlgorithmParamType<double> { enum { type = CV_PARAM_TYPE_REAL }; };
+template<> struct AlgorithmParamType<string> { enum { type = CV_PARAM_TYPE_STRING }; };
+template<> struct AlgorithmParamType<Mat> { enum { type = CV_PARAM_TYPE_MAT }; };
+    
+template<typename _Tp> _Tp Algorithm::get(int paramId) const
+{
+    _Tp value = _Tp();
+    get_(paramId, AlgorithmParamType<_Tp>::type, &value);
+    return value;
+}
+    
+template<typename _Tp> bool Algorithm::set(int paramId, const _Tp& value)
+{
+    set_(paramId, AlgorithmParamType<_Tp>::type, &value);
+    return value;
+}
+    
+template<typename _Tp> _Tp Algorithm::paramDefaultValue(int paramId) const
+{
+    _Tp value = _Tp();
+    paramDefaultValue_(paramId, AlgorithmParamType<_Tp>::type, &value);
+    return value;
+}
+    
+template<typename _Tp> bool Algorithm::paramRange(int paramId, _Tp& minVal, _Tp& maxVal) const
+{
+    return paramRange_(paramId, AlgorithmParamType<_Tp>::type, &minVal, &maxVal);
+}
+
+template<typename _Tp> void Algorithm::addParam(int propId, _Tp& value, bool readOnly, const string& name,
+                                         const string& help, const _Tp& defaultValue,
+                                         _Tp (Algorithm::*getter)(), bool (Algorithm::*setter)(const _Tp&))
+{
+    addParam_(propId, AlgorithmParamType<_Tp>::type, &value, readOnly, name, help, &defaultValue,
+             (void*)getter, (void*)setter);
+}
+    
+template<typename _Tp> void Algorithm::setParamRange(int propId, const _Tp& minVal, const _Tp& maxVal)
+{
+    setParamRange_(propId, AlgorithmParamType<_Tp>::type, &minVal, &maxVal);
+}
+#endif
     
 }
 

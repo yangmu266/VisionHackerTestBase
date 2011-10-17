@@ -41,6 +41,24 @@
 		C70640F413F1226100F4163B /* MyDocument.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = MyDocument.nib; sourceTree = "<group>"; };
 		C70640F713F1227700F4163B /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		C70640F913F1227D00F4163B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
+		C73D96FA144BD87900AEE2D8 /* ATLFake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLFake.h; sourceTree = "<group>"; };
+		C73D96FB144BD87900AEE2D8 /* ByteStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ByteStream.h; sourceTree = "<group>"; };
+		C73D96FC144BD87900AEE2D8 /* classifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = classifier.h; sourceTree = "<group>"; };
+		C73D96FD144BD87900AEE2D8 /* ClassifierData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifierData.h; sourceTree = "<group>"; };
+		C73D96FE144BD87900AEE2D8 /* FaceDetectionBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetectionBase.h; sourceTree = "<group>"; };
+		C73D96FF144BD87900AEE2D8 /* FaceDetectionSoftCascade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetectionSoftCascade.h; sourceTree = "<group>"; };
+		C73D9700144BD87900AEE2D8 /* FaceDetectorLbpPostFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetectorLbpPostFilter.h; sourceTree = "<group>"; };
+		C73D9701144BD87900AEE2D8 /* feature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feature.h; sourceTree = "<group>"; };
+		C73D9702144BD87900AEE2D8 /* globalpara.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globalpara.h; sourceTree = "<group>"; };
+		C73D9703144BD87900AEE2D8 /* histogram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = histogram.h; sourceTree = "<group>"; };
+		C73D9704144BD87900AEE2D8 /* ILabsPostFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILabsPostFilter.h; sourceTree = "<group>"; };
+		C73D9705144BD87900AEE2D8 /* image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image.h; sourceTree = "<group>"; };
+		C73D9706144BD87900AEE2D8 /* lbp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lbp.h; sourceTree = "<group>"; };
+		C73D9707144BD87900AEE2D8 /* Multidetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Multidetector.h; sourceTree = "<group>"; };
+		C73D9708144BD87900AEE2D8 /* Stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stdafx.h; sourceTree = "<group>"; };
+		C73D9709144BD87900AEE2D8 /* windows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = windows.h; sourceTree = "<group>"; };
+		C73D970A144BD87900AEE2D8 /* winTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = winTypes.h; sourceTree = "<group>"; };
+		C73D970B144BD87900AEE2D8 /* wrect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wrect.h; sourceTree = "<group>"; };
 		C7A84E8E13F2DD250092DD11 /* ilabs_postfilter_14jun10a.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = ilabs_postfilter_14jun10a.bin; sourceTree = "<group>"; };
 		C7A84E8F13F2DD250092DD11 /* detector_pruned_rot.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = detector_pruned_rot.dat; sourceTree = "<group>"; };
 		C7D6924113FA4F8C00AD4772 /* FaceDetectorCocoaLib.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = FaceDetectorCocoaLib.dylib; sourceTree = "<group>"; };
@@ -102,6 +120,7 @@
 		C70640D413F121E800F4163B /* TechTester */ = {
 			isa = PBXGroup;
 			children = (
+				C73D96F9144BD87900AEE2D8 /* FaceDetectorCocoaLibHeader */,
 				C70640F213F1225100F4163B /* Resources */,
 				C70640F113F1223E00F4163B /* Classes */,
 				C70640D513F121E800F4163B /* Supporting Files */,
@@ -143,6 +162,31 @@
 			);
 			name = Resources;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		C73D96F9144BD87900AEE2D8 /* FaceDetectorCocoaLibHeader */ = {
+			isa = PBXGroup;
+			children = (
+				C73D96FA144BD87900AEE2D8 /* ATLFake.h */,
+				C73D96FB144BD87900AEE2D8 /* ByteStream.h */,
+				C73D96FC144BD87900AEE2D8 /* classifier.h */,
+				C73D96FD144BD87900AEE2D8 /* ClassifierData.h */,
+				C73D96FE144BD87900AEE2D8 /* FaceDetectionBase.h */,
+				C73D96FF144BD87900AEE2D8 /* FaceDetectionSoftCascade.h */,
+				C73D9700144BD87900AEE2D8 /* FaceDetectorLbpPostFilter.h */,
+				C73D9701144BD87900AEE2D8 /* feature.h */,
+				C73D9702144BD87900AEE2D8 /* globalpara.h */,
+				C73D9703144BD87900AEE2D8 /* histogram.h */,
+				C73D9704144BD87900AEE2D8 /* ILabsPostFilter.h */,
+				C73D9705144BD87900AEE2D8 /* image.h */,
+				C73D9706144BD87900AEE2D8 /* lbp.h */,
+				C73D9707144BD87900AEE2D8 /* Multidetector.h */,
+				C73D9708144BD87900AEE2D8 /* Stdafx.h */,
+				C73D9709144BD87900AEE2D8 /* windows.h */,
+				C73D970A144BD87900AEE2D8 /* winTypes.h */,
+				C73D970B144BD87900AEE2D8 /* wrect.h */,
+			);
+			path = FaceDetectorCocoaLibHeader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,13 +325,11 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TechTester/TechTester-Prefix.pch";
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/TechTester/FaceDetectorCocoaLibHeader\"";
 				INFOPLIST_FILE = "TechTester/TechTester-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TechTester\"",
-					/usr/local/lib,
-					"\"$(SDKROOT)/usr/local/lib/FaceDetectorCocoaLib.dylib.dSYM/Contents/Resources/DWARF\"",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-lz";
@@ -305,13 +347,11 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TechTester/TechTester-Prefix.pch";
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/TechTester/FaceDetectorCocoaLibHeader\"";
 				INFOPLIST_FILE = "TechTester/TechTester-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TechTester\"",
-					/usr/local/lib,
-					"\"$(SDKROOT)/usr/local/lib/FaceDetectorCocoaLib.dylib.dSYM/Contents/Resources/DWARF\"",
 				);
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";

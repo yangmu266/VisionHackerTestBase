@@ -20,12 +20,9 @@
 		438CE3E511D2719F00CF55BC /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438CE3E411D2719F00CF55BC /* CoreMedia.framework */; };
 		43D32BCE11D341F400AFA790 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D32BCD11D341F400AFA790 /* QuartzCore.framework */; };
 		43D32E3011D3A1DB00AFA790 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D32E2F11D3A1DB00AFA790 /* AudioToolbox.framework */; };
-		C7BF5BCA1362F16E00CB54C4 /* FaceDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = C7BF5BC91362F16E00CB54C4 /* FaceDetector.mm */; };
+		C73616B713FCE7E20061C809 /* FaceDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = C73616B613FCE7E20061C809 /* FaceDetector.mm */; };
 		C7BF5BCE1362F35800CB54C4 /* FaceDetectorTestController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C7BF5BCC1362F35800CB54C4 /* FaceDetectorTestController.mm */; };
 		C7BF5BCF1362F35800CB54C4 /* FaceDetectorTestController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7BF5BCD1362F35800CB54C4 /* FaceDetectorTestController.xib */; };
-		C7BF5BD71362F47E00CB54C4 /* some.txt in Resources */ = {isa = PBXBuildFile; fileRef = C7BF5BD51362F47E00CB54C4 /* some.txt */; };
-		C7ED47081364500800951048 /* OpenCVFaceDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = C7ED47071364500800951048 /* OpenCVFaceDetector.mm */; };
-		C7EDE60D136D4394008B90A4 /* ActionDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = C7EDE60C136D4394008B90A4 /* ActionDetector.mm */; };
 		C7F29ACC13E3E4EE0045C012 /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = C7F29ACB13E3E4EE0045C012 /* haarcascade_frontalface_default.xml */; };
 /* End PBXBuildFile section */
 
@@ -62,16 +59,11 @@
 		43D32BCD11D341F400AFA790 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		43D32E2F11D3A1DB00AFA790 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* MyAVController-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MyAVController-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		C7BF5BC71362F09300CB54C4 /* FaceDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FaceDetector.h; path = Classes/FaceDetector.h; sourceTree = "<group>"; };
-		C7BF5BC91362F16E00CB54C4 /* FaceDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = FaceDetector.mm; path = Classes/FaceDetector.mm; sourceTree = "<group>"; };
+		C73616B513FCE7E20061C809 /* FaceDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetector.h; sourceTree = "<group>"; };
+		C73616B613FCE7E20061C809 /* FaceDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceDetector.mm; sourceTree = "<group>"; };
 		C7BF5BCB1362F35800CB54C4 /* FaceDetectorTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FaceDetectorTestController.h; path = Classes/FaceDetectorTestController.h; sourceTree = "<group>"; };
 		C7BF5BCC1362F35800CB54C4 /* FaceDetectorTestController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = FaceDetectorTestController.mm; path = Classes/FaceDetectorTestController.mm; sourceTree = "<group>"; };
 		C7BF5BCD1362F35800CB54C4 /* FaceDetectorTestController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FaceDetectorTestController.xib; path = Classes/FaceDetectorTestController.xib; sourceTree = "<group>"; };
-		C7BF5BD51362F47E00CB54C4 /* some.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = some.txt; path = Classes/some.txt; sourceTree = "<group>"; };
-		C7ED47061364500800951048 /* OpenCVFaceDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVFaceDetector.h; sourceTree = "<group>"; };
-		C7ED47071364500800951048 /* OpenCVFaceDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVFaceDetector.mm; sourceTree = "<group>"; };
-		C7EDE60B136D4394008B90A4 /* ActionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionDetector.h; sourceTree = "<group>"; };
-		C7EDE60C136D4394008B90A4 /* ActionDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ActionDetector.mm; sourceTree = "<group>"; };
 		C7F29ACB13E3E4EE0045C012 /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,7 +131,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C7BF5BD51362F47E00CB54C4 /* some.txt */,
+				C7F29ACB13E3E4EE0045C012 /* haarcascade_frontalface_default.xml */,
 				2899E5210DE3E06400AC0155 /* WelcomeViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* MyAVController-Info.plist */,
@@ -165,16 +157,11 @@
 		C7BF5BD81362F49000CB54C4 /* FaceDetector */ = {
 			isa = PBXGroup;
 			children = (
-				C7F29ACB13E3E4EE0045C012 /* haarcascade_frontalface_default.xml */,
-				C7ED47061364500800951048 /* OpenCVFaceDetector.h */,
-				C7ED47071364500800951048 /* OpenCVFaceDetector.mm */,
-				C7BF5BC71362F09300CB54C4 /* FaceDetector.h */,
-				C7BF5BC91362F16E00CB54C4 /* FaceDetector.mm */,
+				C73616B513FCE7E20061C809 /* FaceDetector.h */,
+				C73616B613FCE7E20061C809 /* FaceDetector.mm */,
 				C7BF5BCB1362F35800CB54C4 /* FaceDetectorTestController.h */,
 				C7BF5BCC1362F35800CB54C4 /* FaceDetectorTestController.mm */,
 				C7BF5BCD1362F35800CB54C4 /* FaceDetectorTestController.xib */,
-				C7EDE60B136D4394008B90A4 /* ActionDetector.h */,
-				C7EDE60C136D4394008B90A4 /* ActionDetector.mm */,
 			);
 			name = FaceDetector;
 			sourceTree = "<group>";
@@ -229,7 +216,6 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* WelcomeViewController.xib in Resources */,
 				C7BF5BCF1362F35800CB54C4 /* FaceDetectorTestController.xib in Resources */,
-				C7BF5BD71362F47E00CB54C4 /* some.txt in Resources */,
 				C7F29ACC13E3E4EE0045C012 /* haarcascade_frontalface_default.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,10 +230,8 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* MyAVControllerAppDelegate.mm in Sources */,
 				28D7ACF80DDB3853001CB0EB /* WelcomeViewController.mm in Sources */,
-				C7BF5BCA1362F16E00CB54C4 /* FaceDetector.mm in Sources */,
 				C7BF5BCE1362F35800CB54C4 /* FaceDetectorTestController.mm in Sources */,
-				C7ED47081364500800951048 /* OpenCVFaceDetector.mm in Sources */,
-				C7EDE60D136D4394008B90A4 /* ActionDetector.mm in Sources */,
+				C73616B713FCE7E20061C809 /* FaceDetector.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +242,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -268,23 +253,27 @@
 				INFOPLIST_FILE = "MyAVController-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/opencv/lib/debug-universal",
 				);
-				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "$(SRCROOT)/opencv_device/lib";
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "$(SRCROOT)/opencv_device/lib/debug-universal";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
-					"-lstdc++",
-					"-lz",
-					"-lopencv_core",
-					"-lopencv_imgproc",
-					"-lopencv_objdetect",
-					"-lopencv_haartraining_engine",
-					"-lopencv_ml",
-					"-lopencv_flann",
-					"-lopencv_legacy",
-					"-lopencv_lapack",
+					"-llibjasper",
+					"-llibjpeg",
+					"-llibpng",
+					"-llibtiff",
+					"-lopencv_calib3d",
 					"-lopencv_contrib",
-					"-zlib",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_imgproc",
+					"-lopencv_lapack",
+					"-lopencv_legacy",
+					"-lopencv_ml",
+					"-lopencv_objdetect",
+					"-lopencv_video",
+					"-lzlib",
 				);
 				PRODUCT_NAME = MyAVController;
 				SDKROOT = iphoneos;
@@ -297,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MyAVController_Prefix.pch;
@@ -305,23 +295,27 @@
 				INFOPLIST_FILE = "MyAVController-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/opencv/lib/debug-universal",
 				);
-				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "$(SRCROOT)/opencv_device/lib";
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "$(SRCROOT)/opencv_device/lib/release-universal";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
-					"-lstdc++",
-					"-lz",
-					"-lopencv_core",
-					"-lopencv_imgproc",
-					"-lopencv_objdetect",
-					"-lopencv_haartraining_engine",
-					"-lopencv_ml",
-					"-lopencv_flann",
-					"-lopencv_legacy",
-					"-lopencv_lapack",
+					"-llibjasper",
+					"-llibjpeg",
+					"-llibpng",
+					"-llibtiff",
+					"-lopencv_calib3d",
 					"-lopencv_contrib",
-					"-zlib",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_imgproc",
+					"-lopencv_lapack",
+					"-lopencv_legacy",
+					"-lopencv_ml",
+					"-lopencv_objdetect",
+					"-lopencv_video",
+					"-lzlib",
 				);
 				PRODUCT_NAME = MyAVController;
 				SDKROOT = iphoneos;

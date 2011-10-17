@@ -168,7 +168,7 @@ inline Mat::Mat(Size _sz, int _type, void* _data, size_t _step)
     dataend = datalimit - _step + minstep;
 }
 
-    
+
 inline Mat::Mat(const CvMat* m, bool copyData)
     : flags(MAGIC_VAL + (m->type & (CV_MAT_TYPE_MASK|CV_MAT_CONT_FLAG))),
     dims(2), rows(m->rows), cols(m->cols), data(m->data.ptr), refcount(0),
@@ -679,7 +679,7 @@ inline Size Mat::MSize::operator()() const
     CV_DbgAssert(p[-1] <= 2); 
     return Size(p[1], p[0]);
 }
-inline int Mat::MSize::operator[](int i) const { return p[i]; }
+inline const int& Mat::MSize::operator[](int i) const { return p[i]; }
 inline int& Mat::MSize::operator[](int i) { return p[i]; }
 inline Mat::MSize::operator const int*() const { return p; }
 
@@ -704,7 +704,7 @@ inline bool Mat::MSize::operator != (const MSize& sz) const
     
 inline Mat::MStep::MStep() { p = buf; p[0] = p[1] = 0; }
 inline Mat::MStep::MStep(size_t s) { p = buf; p[0] = s; p[1] = 0; }
-inline size_t Mat::MStep::operator[](int i) const { return p[i]; }
+inline const size_t& Mat::MStep::operator[](int i) const { return p[i]; }
 inline size_t& Mat::MStep::operator[](int i) { return p[i]; }
 inline Mat::MStep::operator size_t() const
 {
@@ -805,7 +805,7 @@ template<typename _Tp> inline Mat_<_Tp>::Mat_(const Mat_& m, const Rect& roi)
 
 template<typename _Tp> template<int n> inline
     Mat_<_Tp>::Mat_(const Vec<typename DataType<_Tp>::channel_type, n>& vec, bool copyData)
-    : Mat(n/DataType<_Tp>::channels, 1, DataType<_Tp>::type, &vec)
+    : Mat(n/DataType<_Tp>::channels, 1, DataType<_Tp>::type, (void*)&vec)
 {
     CV_Assert(n%DataType<_Tp>::channels == 0);
     if( copyData )
@@ -814,7 +814,7 @@ template<typename _Tp> template<int n> inline
 
 template<typename _Tp> template<int m, int n> inline
     Mat_<_Tp>::Mat_(const Matx<typename DataType<_Tp>::channel_type,m,n>& M, bool copyData)
-    : Mat(m, n/DataType<_Tp>::channels, DataType<_Tp>::type, &M)
+    : Mat(m, n/DataType<_Tp>::channels, DataType<_Tp>::type, (void*)&M)
 {
     CV_Assert(n % DataType<_Tp>::channels == 0);
     if( copyData )
@@ -822,7 +822,7 @@ template<typename _Tp> template<int m, int n> inline
 }
     
 template<typename _Tp> inline Mat_<_Tp>::Mat_(const Point_<typename DataType<_Tp>::channel_type>& pt, bool copyData)
-    : Mat(2/DataType<_Tp>::channels, 1, DataType<_Tp>::type, &pt)
+    : Mat(2/DataType<_Tp>::channels, 1, DataType<_Tp>::type, (void*)&pt)
 {
     CV_Assert(2 % DataType<_Tp>::channels == 0);
     if( copyData )
@@ -830,7 +830,7 @@ template<typename _Tp> inline Mat_<_Tp>::Mat_(const Point_<typename DataType<_Tp
 }
 
 template<typename _Tp> inline Mat_<_Tp>::Mat_(const Point3_<typename DataType<_Tp>::channel_type>& pt, bool copyData)
-    : Mat(3/DataType<_Tp>::channels, 1, DataType<_Tp>::type, &pt)
+    : Mat(3/DataType<_Tp>::channels, 1, DataType<_Tp>::type, (void*)&pt)
 {
     CV_Assert(3 % DataType<_Tp>::channels == 0);
     if( copyData )
@@ -1808,7 +1808,7 @@ template<typename _Tp> inline Point MatConstIterator_<_Tp>::pos() const
     CV_DbgAssert( m->dims <= 2 );
     if( m->isContinuous() )
     {
-        ptrdiff_t ofs = ptr - (_Tp*)m->data;
+        ptrdiff_t ofs = (const _Tp*)ptr - (const _Tp*)m->data;
         int y = (int)(ofs / m->cols), x = (int)(ofs - (ptrdiff_t)y*m->cols);
         return Point(x, y);
     }

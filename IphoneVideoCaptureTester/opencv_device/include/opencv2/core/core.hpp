@@ -262,6 +262,7 @@ CV_EXPORTS int64 getCPUTickCount();
   - CV_CPU_SSSE3 - SSSE 3
   - CV_CPU_SSE4_1 - SSE 4.1
   - CV_CPU_SSE4_2 - SSE 4.2
+  - CV_CPU_POPCNT - POPCOUNT
   - CV_CPU_AVX - AVX
   
   \note {Note that the function output is not static. Once you called cv::useOptimized(false),
@@ -1779,7 +1780,7 @@ public:
     {
         MSize(int* _p);
         Size operator()() const;
-        int operator[](int i) const;
+        const int& operator[](int i) const;
         int& operator[](int i);
         operator const int*() const;
         bool operator == (const MSize& sz) const;
@@ -1792,7 +1793,7 @@ public:
     {
         MStep();
         MStep(size_t s);
-        size_t operator[](int i) const;
+        const size_t& operator[](int i) const;
         size_t& operator[](int i);
         operator size_t() const;
         MStep& operator = (size_t s);
@@ -1816,7 +1817,7 @@ public:
 class CV_EXPORTS RNG
 {
 public:
-    enum { A=4164903690U, UNIFORM=0, NORMAL=1 };
+    enum { UNIFORM=0, NORMAL=1 };
 
     RNG();
     RNG(uint64 _state);
@@ -4040,6 +4041,54 @@ public:
     int index;
 };
 
+#if 0    
+class CV_EXPORTS AlgorithmImpl;
+
+/*!
+  Base class for high-level OpenCV algorithms
+*/    
+class CV_EXPORTS Algorithm
+{
+public:
+    virtual ~Algorithm();
+    virtual string name() const;
+    
+    template<typename _Tp> _Tp get(int paramId) const;
+    template<typename _Tp> bool set(int paramId, const _Tp& value);
+    string paramName(int paramId) const;
+    string paramHelp(int paramId) const;
+    int paramType(int paramId) const;
+    int findParam(const string& name) const;
+    template<typename _Tp> _Tp paramDefaultValue(int paramId) const;
+    template<typename _Tp> bool paramRange(int paramId, _Tp& minVal, _Tp& maxVal) const;
+    
+    virtual void getParams(vector<int>& ids) const;
+    virtual void write(vector<uchar>& buf) const;
+    virtual bool read(const vector<uchar>& buf);
+    
+    typedef Algorithm* (*Constructor)(void);
+    static void add(const string& name, Constructor create);
+    static void getList(vector<string>& algorithms);
+    static Ptr<Algorithm> create(const string& name);
+    
+protected:
+    template<typename _Tp> void addParam(int propId, _Tp& value, bool readOnly, const string& name,
+                                         const string& help=string(), const _Tp& defaultValue=_Tp(),
+                                         _Tp (Algorithm::*getter)()=0, bool (Algorithm::*setter)(const _Tp&)=0);
+    template<typename _Tp> void setParamRange(int propId, const _Tp& minVal, const _Tp& maxVal);
+    
+    bool set_(int paramId, int argType, const void* value);
+    void get_(int paramId, int argType, void* value);
+    void paramDefaultValue_(int paramId, int argType, void* value);
+    void paramRange_(int paramId, int argType, void* minval, void* maxval);
+    void addParam_(int propId, int argType, void* value, bool readOnly, const string& name,
+                  const string& help, const void* defaultValue, void* getter, void* setter);
+    void setParamRange_(int propId, int argType, const void* minVal, const void* maxVal);
+    
+    Ptr<AlgorithmImpl> impl;
+};
+#endif
+    
 }
 
 #endif // __cplusplus

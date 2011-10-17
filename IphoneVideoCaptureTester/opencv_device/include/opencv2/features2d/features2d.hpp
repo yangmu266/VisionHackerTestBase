@@ -55,10 +55,12 @@ extern "C" {
 typedef struct CvSURFPoint
 {
     CvPoint2D32f pt;
-    int laplacian;
-    int size;
-    float dir;
-    float hessian;
+
+    int          laplacian;
+    int          size;
+    float        dir;
+    float        hessian;
+
 } CvSURFPoint;
 
 CV_INLINE CvSURFPoint cvSURFPoint( CvPoint2D32f pt, int laplacian,
@@ -66,21 +68,24 @@ CV_INLINE CvSURFPoint cvSURFPoint( CvPoint2D32f pt, int laplacian,
                                    float hessian CV_DEFAULT(0))
 {
     CvSURFPoint kp;
-    kp.pt = pt;
+
+    kp.pt        = pt;
     kp.laplacian = laplacian;
-    kp.size = size;
-    kp.dir = dir;
-    kp.hessian = hessian;
+    kp.size      = size;
+    kp.dir       = dir;
+    kp.hessian   = hessian;
+
     return kp;
 }
 
 typedef struct CvSURFParams
 {
-    int extended;
+    int    extended;
     double hessianThreshold;
 
-    int nOctaves;
-    int nOctaveLayers;
+    int    nOctaves;
+    int    nOctaveLayers;
+
 } CvSURFParams;
 
 CVAPI(CvSURFParams) cvSURFParams( double hessianThreshold, int extended CV_DEFAULT(0) );
@@ -271,7 +276,7 @@ public:
         static const int DEFAULT_NOCTAVES = 4;
         static const int DEFAULT_NOCTAVE_LAYERS = 3;
         static const int DEFAULT_FIRST_OCTAVE = -1;
-        enum{ FIRST_ANGLE = 0, AVERAGE_ANGLE = 1 };
+        enum { FIRST_ANGLE = 0, AVERAGE_ANGLE = 1 };
 
         CommonParams();
         CommonParams( int _nOctaves, int _nOctaveLayers, int _firstOctave, int _angleMode );
@@ -321,7 +326,7 @@ public:
           const DescriptorParams& _descriptorParams = DescriptorParams() );
 
     //! returns the descriptor size in floats (128)
-    int descriptorSize() const { return DescriptorParams::DESCRIPTOR_SIZE; }
+    int descriptorSize() const;
     //! finds the keypoints using SIFT algorithm
     void operator()(const Mat& img, const Mat& mask,
                     vector<KeyPoint>& keypoints) const;
@@ -332,9 +337,10 @@ public:
                     Mat& descriptors,
                     bool useProvidedKeypoints=false) const;
 
-    CommonParams getCommonParams () const { return commParams; }
-    DetectorParams getDetectorParams () const { return detectorParams; }
-    DescriptorParams getDescriptorParams () const { return descriptorParams; }
+    CommonParams getCommonParams () const;
+    DetectorParams getDetectorParams () const;
+    DescriptorParams getDescriptorParams () const;
+
 protected:
     CommonParams commParams;
     DetectorParams detectorParams;
@@ -518,6 +524,7 @@ public:
     virtual int operator()(const Mat& img, Point2f kpt, vector<float>& signature) const;
     virtual int operator()(const Mat& patch, vector<float>& signature) const;
     virtual void clear();
+    virtual bool empty() const;
     void setVerbose(bool verbose);
     
     int getClassCount() const;
@@ -571,54 +578,6 @@ protected:
     vector<float> posteriors;
 };
 
-
-class CV_EXPORTS PlanarObjectDetector
-{
-public:
-    PlanarObjectDetector();
-    PlanarObjectDetector(const FileNode& node);
-    PlanarObjectDetector(const vector<Mat>& pyr, int _npoints=300,
-                         int _patchSize=FernClassifier::PATCH_SIZE,
-                         int _nstructs=FernClassifier::DEFAULT_STRUCTS,
-                         int _structSize=FernClassifier::DEFAULT_STRUCT_SIZE,
-                         int _nviews=FernClassifier::DEFAULT_VIEWS,
-                         const LDetector& detector=LDetector(),
-                         const PatchGenerator& patchGenerator=PatchGenerator());
-    virtual ~PlanarObjectDetector();
-    virtual void train(const vector<Mat>& pyr, int _npoints=300,
-                       int _patchSize=FernClassifier::PATCH_SIZE,
-                       int _nstructs=FernClassifier::DEFAULT_STRUCTS,
-                       int _structSize=FernClassifier::DEFAULT_STRUCT_SIZE,
-                       int _nviews=FernClassifier::DEFAULT_VIEWS,
-                       const LDetector& detector=LDetector(),
-                       const PatchGenerator& patchGenerator=PatchGenerator());
-    virtual void train(const vector<Mat>& pyr, const vector<KeyPoint>& keypoints,
-                       int _patchSize=FernClassifier::PATCH_SIZE,
-                       int _nstructs=FernClassifier::DEFAULT_STRUCTS,
-                       int _structSize=FernClassifier::DEFAULT_STRUCT_SIZE,
-                       int _nviews=FernClassifier::DEFAULT_VIEWS,
-                       const LDetector& detector=LDetector(),
-                       const PatchGenerator& patchGenerator=PatchGenerator());
-    Rect getModelROI() const;
-    vector<KeyPoint> getModelPoints() const;
-    const LDetector& getDetector() const;
-    const FernClassifier& getClassifier() const;
-    void setVerbose(bool verbose);
-    
-    void read(const FileNode& node);
-    void write(FileStorage& fs, const String& name=String()) const;
-    bool operator()(const Mat& image, CV_OUT Mat& H, CV_OUT vector<Point2f>& corners) const;
-    bool operator()(const vector<Mat>& pyr, const vector<KeyPoint>& keypoints,
-                                       CV_OUT Mat& H, CV_OUT vector<Point2f>& corners,
-                                       CV_OUT vector<int>* pairs=0) const;
-    
-protected:
-    bool verbose;
-    Rect modelROI;
-    vector<KeyPoint> modelPoints;
-    LDetector ldetector;
-    FernClassifier fernClassifier;
-};
 
 /****************************************************************************************\
 *                                 Calonder Classifier                                    *
@@ -1129,6 +1088,8 @@ public:
     // GetPCAFilename: get default PCA filename
     static string GetPCAFilename () { return "pca.yml"; }
 
+    virtual bool empty() const { return m_train_feature_count <= 0 ? true : false; }
+
 protected:
     CvSize m_patch_size; // patch size
     int m_pose_count; // the number of poses for each descriptor
@@ -1255,6 +1216,9 @@ public:
     // Read detector object from a file node.
     virtual void write( FileStorage& ) const;
 
+    // Return true if detector object is empty
+    virtual bool empty() const;
+
     // Create feature detector by detector name.
     static Ptr<FeatureDetector> create( const string& detectorType );
 
@@ -1376,6 +1340,49 @@ protected:
     SURF surf;
 };
 
+class CV_EXPORTS SimpleBlobDetector : public cv::FeatureDetector
+{
+public:
+  struct CV_EXPORTS Params
+  {
+      Params();
+      float thresholdStep;
+      float minThreshold;
+      float maxThreshold;
+      float maxCentersDist;
+      int defaultKeypointSize;
+      size_t minRepeatability;
+      bool computeRadius;
+      bool isGrayscaleCentroid;
+      int centroidROIMargin;
+
+      bool filterByArea, filterByInertia, filterByCircularity, filterByColor, filterByConvexity;
+      float minArea;
+      float maxArea;
+      float minCircularity;
+      float minInertiaRatio;
+      float minConvexity;
+      uchar blobColor;
+  };
+
+  SimpleBlobDetector(const SimpleBlobDetector::Params &parameters = SimpleBlobDetector::Params());
+
+protected:
+  struct CV_EXPORTS Center
+  {
+      Point2d location;
+      double radius;
+      double confidence;
+  };
+
+  virtual void detectImpl( const Mat& image, vector<KeyPoint>& keypoints, const Mat& mask=Mat() ) const;
+  virtual void findBlobs(const cv::Mat &image, const cv::Mat &binaryImage, std::vector<Center> &centers) const;
+
+  Point2d computeGrayscaleCentroid(const cv::Mat &image, const std::vector<cv::Point> &contour) const;
+
+  Params params;
+};
+
 class CV_EXPORTS DenseFeatureDetector : public FeatureDetector
 {
 public:
@@ -1423,6 +1430,7 @@ public:
                                 int gridRows=4, int gridCols=4 );
     
     // TODO implement read/write
+    virtual bool empty() const;
 
 protected:
 	virtual void detectImpl( const Mat& image, vector<KeyPoint>& keypoints, const Mat& mask=Mat() ) const;
@@ -1443,6 +1451,7 @@ public:
     PyramidAdaptedFeatureDetector( const Ptr<FeatureDetector>& detector, int levels=2 );
     
     // TODO implement read/write
+    virtual bool empty() const;
 
 protected:
 	virtual void detectImpl( const Mat& image, vector<KeyPoint>& keypoints, const Mat& mask=Mat() ) const;
@@ -1500,6 +1509,8 @@ public:
      * \param min_features the minimum desired features
 	 */
     DynamicAdaptedFeatureDetector( const Ptr<AdjusterAdapter>& adjaster, int min_features=400, int max_features=500, int max_iters=5 );
+
+    virtual bool empty() const;
 
 protected:
     virtual void detectImpl( const Mat& image, vector<KeyPoint>& keypoints, const Mat& mask=Mat() ) const;
@@ -1608,6 +1619,8 @@ public:
     virtual int descriptorSize() const = 0;
     virtual int descriptorType() const = 0;
 
+    virtual bool empty() const;
+
     static Ptr<DescriptorExtractor> create( const string& descriptorExtractorType );
 
 protected:
@@ -1617,7 +1630,7 @@ protected:
      * Remove keypoints within borderPixels of an image edge.
      */
     static void removeBorderKeypoints( vector<KeyPoint>& keypoints,
-                                       Size imageSize, int borderSize );
+                                       Size imageSize, float borderSize );
 };
 
 /*
@@ -1681,6 +1694,8 @@ public:
     virtual int descriptorSize() const { return classifier_.classes(); }
     virtual int descriptorType() const { return DataType<T>::type; }
 
+    virtual bool empty() const;
+
 protected:
 	virtual void computeImpl( const Mat& image, vector<KeyPoint>& keypoints, Mat& descriptors ) const;
 
@@ -1723,6 +1738,12 @@ template<typename T>
 void CalonderDescriptorExtractor<T>::write( FileStorage& ) const
 {}
 
+template<typename T>
+bool CalonderDescriptorExtractor<T>::empty() const
+{
+    return classifier_.trees_.empty();
+}
+
 /*
  * OpponentColorDescriptorExtractor
  *
@@ -1742,6 +1763,8 @@ public:
 
     virtual int descriptorSize() const;
     virtual int descriptorType() const;
+
+    virtual bool empty() const;
 
 protected:
 	virtual void computeImpl( const Mat& image, vector<KeyPoint>& keypoints, Mat& descriptors ) const;
@@ -1767,7 +1790,7 @@ public:
     /// @todo read and write for brief
 
 protected:
-	virtual void computeImpl(const Mat& image, std::vector<KeyPoint>& keypoints, Mat& descriptors) const;
+    virtual void computeImpl(const Mat& image, std::vector<KeyPoint>& keypoints, Mat& descriptors) const;
 
     typedef void(*PixelTestFn)(const Mat&, const std::vector<KeyPoint>&, Mat&);
 
@@ -1925,7 +1948,7 @@ public:
     /*
      * Return true if there are not train descriptors in collection.
      */
-	bool empty() const;
+    virtual bool empty() const;
     /*
      * Return true if the matcher supports mask in match methods.
      */
@@ -2076,8 +2099,8 @@ Ptr<DescriptorMatcher> BruteForceMatcher<Distance>::clone( bool emptyTrainData )
     BruteForceMatcher* matcher = new BruteForceMatcher(distance);
     if( !emptyTrainData )
     {
-        transform( trainDescCollection.begin(), trainDescCollection.end(),
-                   matcher->trainDescCollection.begin(), clone_op );
+        std::transform( trainDescCollection.begin(), trainDescCollection.end(),
+                        matcher->trainDescCollection.begin(), clone_op );
     }
     return matcher;
 }
@@ -2152,14 +2175,14 @@ inline void BruteForceMatcher<Distance>::commonKnnMatchImpl( BruteForceMatcher<D
                  bestMatch.distance = std::numeric_limits<float>::max();
                  for( size_t iIdx = 0; iIdx < imgCount; iIdx++ )
                  {
-					 if( !allDists[iIdx].empty() )
-					 {
-						 double minVal;
-						 Point minLoc;
-						 minMaxLoc( allDists[iIdx], &minVal, 0, &minLoc, 0 );
-						 if( minVal < bestMatch.distance )
-							 bestMatch = DMatch( qIdx, minLoc.x, (int)iIdx, (float)minVal );
-					 }
+                     if( !allDists[iIdx].empty() )
+                     {
+                         double minVal;
+                         Point minLoc;
+                         minMaxLoc( allDists[iIdx], &minVal, 0, &minLoc, 0 );
+                         if( minVal < bestMatch.distance )
+                                 bestMatch = DMatch( qIdx, minLoc.x, (int)iIdx, (float)minVal );
+                     }
                  }
                  if( bestMatch.trainIdx == -1 )
                      break;
@@ -2367,6 +2390,9 @@ public:
     // Writes matcher object to a file storage
     virtual void write( FileStorage& ) const;
 
+    // Return true if matching object is empty (e.g. feature detector or descriptor matcher are empty)
+    virtual bool empty() const;
+
     // Clone the matcher. If emptyTrainData is false the method create deep copy of the object, i.e. copies
     // both parameters and train data. If emptyTrainData is true the method create object copy with current parameters
     // but with empty train data.
@@ -2474,6 +2500,8 @@ public:
     virtual void read( const FileNode &fn );
     virtual void write( FileStorage& fs ) const;
 
+    virtual bool empty() const;
+
     virtual Ptr<GenericDescriptorMatcher> clone( bool emptyTrainData=false ) const;
 
 protected:
@@ -2541,6 +2569,7 @@ public:
 
     virtual void read( const FileNode &fn );
     virtual void write( FileStorage& fs ) const;
+    virtual bool empty() const;
     
     virtual Ptr<GenericDescriptorMatcher> clone( bool emptyTrainData=false ) const;
 
@@ -2587,6 +2616,7 @@ public:
 
     virtual void read( const FileNode& fn );
     virtual void write( FileStorage& fs ) const;
+    virtual bool empty() const;
 
     virtual Ptr<GenericDescriptorMatcher> clone( bool emptyTrainData=false ) const;
 
@@ -2621,7 +2651,7 @@ struct CV_EXPORTS DrawMatchesFlags
 };
 
 // Draw keypoints.
-CV_EXPORTS void drawKeypoints( const Mat& image, const vector<KeyPoint>& keypoints, Mat& outImg,
+CV_EXPORTS void drawKeypoints( const Mat& image, const vector<KeyPoint>& keypoints, Mat& outImage,
                                const Scalar& color=Scalar::all(-1), int flags=DrawMatchesFlags::DEFAULT );
 
 // Draws matches of keypints from two images on output image.

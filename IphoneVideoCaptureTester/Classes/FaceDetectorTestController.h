@@ -6,14 +6,14 @@
 //  Copyright 2011年 Tsinghua University. All rights reserved.
 //
 
+#include "FaceDetector.h"
 
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-#import "OpenCVFaceDetector.h"
-#include "FaceDetector.h"
-#include "ActionDetector.h"
+//#import "OpenCVFaceDetector.h"
+//#include "ActionDetector.h"
 #include <vector>
 using std::vector;
 
@@ -23,7 +23,6 @@ using std::vector;
 	AVCaptureSession *_captureSession;
 	UIImageView *_imageView;
 	UILabel *_frameCounterLabel;
-	struct _rect faceBounds;
 	
 	CGPoint currentPosition;
 	
@@ -32,7 +31,7 @@ using std::vector;
 }
 
 @property (nonatomic) FaceDetector fd;
-@property (nonatomic, retain) ActionDetector *ad;
+//@property (nonatomic, retain) ActionDetector *ad;
 @property int* factor;
 @property int lowQuality;
 @property int useOpenCV;
@@ -48,17 +47,17 @@ using std::vector;
 @property (nonatomic, retain) IBOutlet UILabel *centerLabel;
 @property (nonatomic, retain) IBOutlet UIImageView *curveImageView;
 
--(void)localTest;
+//-(void)localTest;
 -(void)initCapture;
--(IBAction)qualitySwitchButtonDown;
--(IBAction)opencvSwitchButtonDown;
-@property (nonatomic, retain) OpenCVFaceDetector *opcvfd;
+//-(IBAction)qualitySwitchButtonDown;
+//-(IBAction)opencvSwitchButtonDown;
+//@property (nonatomic, retain) OpenCVFaceDetector *opcvfd;
 
 @property int sampleCounter;
 @property (nonatomic, retain) NSString *sampleFolderName;
 @property int sampleRecorderFrameCounter;
 @property (nonatomic, retain) IBOutlet UIButton *sampleButton;
 @property (nonatomic, retain) UIAcceleration *sampleAcceleration;
--(IBAction)sampleButtonDown;
+//-(IBAction)sampleButtonDown;
 
 @end
